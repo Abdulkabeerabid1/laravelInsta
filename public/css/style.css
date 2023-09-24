@@ -1,0 +1,56 @@
+.navbar-left-div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.navbar-left-div span{
+	margin-left: 6px;
+}
+.navbar-left-div img{
+	border-right: 1px solid black;
+    padding-right: 8px;
+}
+.borderLine{
+	border: 1px solid black;
+}
+.postsCountDiv span{
+	margin-right: 2rem;
+}
+.urduFont{
+	font-family: 'Noto Nastaliq Urdu', serif;
+	font-size: 13px;
+    letter-spacing: 0.9px;
+}
+.d-flex-own{
+	display: flex;
+	align-items: center;
+}
+.anchor-own{
+	line-height: 16px !important;
+    height: 31px;
+    margin-left: 15px;
+}
+#iconChangeImage{
+	position: absolute;
+    bottom: 7px;
+    right: 13px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#iconDeleteImage{
+	position: absolute;
+    bottom: 7px;
+/*    right: 13px;*/
+    left: 16px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.card_imageAndCaption{
+	width: 58%;
+	margin: 0 auto;
+}
+#deletePostBtn{
+	position: absolute;
+	bottom: 10px;
+	right: 22px;
+}
