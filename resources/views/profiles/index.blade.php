@@ -34,9 +34,16 @@
                         @if(Auth()->id() == $user->id)
                             <a href="/profile/{{$user->id}}/edit"class='btn btn-secondary anchor-own'>Edit Profile</a> 
                         @endif
-                        @if(Auth()->id() != $user->id)
-                            <span class="text-primary" onclick="followingFunc({{$user->id}}, {{Auth()->id()}}, '{{csrf_token()}}')" id="followBtn" style="text-decoration: none; margin-left: 10px; cursor: pointer;">Follow</span>
+                        @if(Auth()->id() != $user->id && Auth::check())
+                            <span class="text-primary" onclick="followingFunc({{$user->id}}, {{Auth()->id() ?? "NULL"}}, '{{csrf_token()}}')" id="followBtn" style="text-decoration: none; margin-left: 10px; cursor: pointer;">
+                                Follow
+                            </span>
                         @endif
+                        {{-- @if($user->following == NULL) --}}
+                            {{
+                                dd($user->following('items'));
+                            }}
+                        {{-- @endif --}}
                     </div>
                     @if(Auth()->id() == $user->id)
                         <a href="/p/create"class='btn btn-primary' style="line-height: 18px; margin-left: 15px;">Add New Post</a>

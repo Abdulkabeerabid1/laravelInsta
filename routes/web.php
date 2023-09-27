@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::post('/following', [App\Http\Controllers\FollowsController::class, 'store']);
+Route::post('/following/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
 Route::patch('/profile/{user}', [App\Http\Controllers\ProfileController::class, 'update']);
 Route::delete('/p/deleteProfileImg', [App\Http\Controllers\ProfileController::class, 'destroy']);
 Route::delete('p/deletePost', [App\Http\Controllers\PostsController::class, 'destroy']);

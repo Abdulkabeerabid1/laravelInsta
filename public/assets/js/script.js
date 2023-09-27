@@ -1,6 +1,7 @@
 function followingFunc(userId, authId, csrf_token){
+	var urlPassed = '/following/'+userId;
 	$.ajax({
-		url: '/following',
+		url: urlPassed,
 		method: 'POST',
 		data: {
 			"userId": userId, 
@@ -8,6 +9,7 @@ function followingFunc(userId, authId, csrf_token){
 			"_token": csrf_token
 		},
 		success: function(result){
+			console.log(result);
 			if($('#followBtn').text() == 'Follow'){
 				$('#followBtn').text("Following");
 			}else{
